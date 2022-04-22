@@ -1,0 +1,53 @@
+Blueprints
+	deployment**
+
+
+ABSTRACTION OF CONTAINERS
+COMUNCATION
+	Pod:
+		atomic object
+		Layer of abstraction on top of containers
+
+	Service 
+		2 functionalities
+			Static IP
+			Works as a load balancer
+
+
+ROUTING TRAFFIC INTO CLUSTER
+	Ingress
+
+ERXTERNAL CONFIGURATION
+	CONFIGMAP
+	SECRETS
+
+DATA PERSISTENCES
+	VOLUMES
+
+POD BLUEPRINTS	
+
+	Deployment
+		Abstraction on top of pods, which makes it more convinient to interate with pods, replicate and so on
+		In practice, you'll be working with deployments, not with pods
+		scaleup-scaledown replicas
+		DB CAN'T BE REPLICATED VIA DEPLOYMENT
+			because database has state
+			Data insonsistences
+	STATEFULSET
+		for stateful apps or (databases)
+			mongodb
+			eslasticsearch
+	 		postgreSQ
+			etc.
+		Deploying statefulset not easy !!!
+		coomon practice is *Databases  are often hosted outside k8s cluster
+
+Node
+	Space where pod is deployed
+
+
+
+
+
+
+
